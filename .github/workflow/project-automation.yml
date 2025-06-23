@@ -1,0 +1,16 @@
+name: Project Board Automation
+
+on:
+  issues:
+    types: [opened, reopened, closed]
+  pull_request:
+    types: [opened, reopened, review_requested, closed]
+
+jobs:
+  manage_project_items:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.5.0
+        with:
+          project-url: https://github.com/users/pengeron/projects/1
+          github-token: ${{ secrets.PROJECT_TOKEN }}
