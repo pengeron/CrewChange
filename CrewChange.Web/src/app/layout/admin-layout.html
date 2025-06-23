@@ -1,0 +1,21 @@
+<div class="admin-layout">
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="toggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>CrewChange Admin</span>
+    <span class="spacer"></span>
+    <app-header></app-header>
+  </mat-toolbar>
+
+  <div class="container">
+    <mat-sidenav-container>
+      <mat-sidenav mode="side" [opened]="sidenavOpened">
+        <app-sidebar></app-sidebar>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+</div>

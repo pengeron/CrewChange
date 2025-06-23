@@ -1,0 +1,32 @@
+.table-container {
+  padding: 16px;
+
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .actions {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  mat-table {
+    width: 100%;
+    margin-bottom: 16px;
+
+    .mat-cell {
+      padding: 8px;
+    }
+
+    .mat-header-cell {
+      padding: 8px;
+      font-weight: bold;
+    }
+  }
+
+  .mat-mdc-row:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+}

@@ -1,0 +1,46 @@
+.admin-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .mat-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  .container {
+    display: flex;
+    flex: 1;
+    margin-top: 64px; // Height of toolbar
+
+    mat-sidenav-container {
+      flex: 1;
+      background: inherit;
+
+      mat-sidenav {
+        width: 250px;
+        padding-top: 0;
+      }
+
+      mat-sidenav-content {
+        padding: 20px;
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 600px) {
+  .admin-layout {
+    .container {
+      margin-top: 56px; // Smaller toolbar height on mobile
+
+      mat-sidenav {
+        width: 200px;
+      }
+    }
+  }
+}
