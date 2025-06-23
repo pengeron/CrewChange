@@ -1,0 +1,6 @@
+@CrewChange.API_HostAddress = http://localhost:5063
+
+GET {{CrewChange.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
